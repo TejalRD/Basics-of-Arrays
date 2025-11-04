@@ -4,7 +4,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        k %= n
+        k = k%n #This ensures that even if k is larger you rotate with effective steps. So rotating 10 steps is the same as rotating 3 steps (because after every full cycle of 7, the array looks the same again)
 
         def reverse(l,r):
             while l<r:
